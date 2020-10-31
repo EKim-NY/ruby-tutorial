@@ -1,0 +1,41 @@
+class Pets 
+  attr_accessor :name, :species
+  
+  def initialize(name="", species="") 
+    @name = name 
+    @species = species   
+  end 
+  
+end 
+
+
+class Adding_Pets
+  def initialize (owner)
+    @owner = owner 
+    @pets_owned_by_owner = []  
+  end 
+  
+  def add_a_pet(name, species) 
+    @pets_owned_by_owner << Pets.new(name, species)
+  end 
+  
+  def show_all_pets
+    puts "#{@owner} owns #{@pets_owned_by_owner.count} pets" 
+
+    @pets_owned_by_owner.each { |pet|
+        puts "Pet: #{pet.name.ljust(15)} is a #{pet.species}" 
+    }
+  end 
+  
+  
+end
+
+my_pets = Adding_Pets.new "Cassie's Pets"
+my_pets.add_a_pet("Wilbur", "pig")
+my_pets.add_a_pet("Charlotte", "spider")
+my_pets.show_all_pets 
+
+myapp.show_all_pets
+
+
+
