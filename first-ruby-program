@@ -30,12 +30,14 @@ class Adding_Pets
   
 end
 
+
+
 my_pets = Adding_Pets.new "Cassie's Pets"
 my_pets.add_a_pet("Wilbur", "pig")
 my_pets.add_a_pet("Charlotte", "spider")
 my_pets.show_all_pets 
 
+
+
 myapp.show_all_pets
-
-
 
